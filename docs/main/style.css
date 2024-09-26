@@ -1,0 +1,32 @@
+.slidev-layout p:has(img) {
+    height: 100%;
+}
+
+.slidev-layout img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+blockquote cite::before {
+    content: "- ";
+}
+
+.big-quote blockquote p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.big-quote blockquote footer {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.slidev-layout h1 + p {
+    opacity: 1;
+}
+
+.slidev-layout div.footer {
+    position: absolute;
+    bottom: 30px;
+}
