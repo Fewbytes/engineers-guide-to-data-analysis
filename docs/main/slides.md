@@ -401,6 +401,20 @@ Aggregation can (and does) happen in all stages
 
 ---
 
+# Retention, resolution
+Different needs, different data
+
+- Emergencies
+  - Usually 24h is long enough
+  - But need high cardinality, high res
+- Capacity planning, BI, etc
+  - Long time frames (years)
+  - Low resolution is ok
+
+Often different Data engines too
+
+---
+
 # Message bus pipeline
 ![](/images/telemetry-pipeline-kafka.svg)
 
@@ -409,6 +423,13 @@ Aggregation can (and does) happen in all stages
 # Cluster?
 
 ![](/images/telemetry-pipeline-k8s.svg)
+
+
+---
+
+# Redudancy
+
+![](/images/telemetry-pipeline-redundant.svg)
 
 ---
 layout: section
