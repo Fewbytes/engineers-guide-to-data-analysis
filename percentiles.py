@@ -1,3 +1,9 @@
+# /usr/bin/env uv run
+# dependencies = [
+#   "marimo",
+#   "scipy"
+# ]
+
 import marimo
 
 __generated_with = "0.8.18"
@@ -9,7 +15,7 @@ def __():
     import scipy
     import numpy as np
     import marimo as mo
-    from scipy.stats import gamma, gamma
+    from scipy.stats import gamma
 
 
     def p99(series, axis=1):
