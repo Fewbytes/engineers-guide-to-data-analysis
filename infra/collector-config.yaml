@@ -27,6 +27,17 @@ receivers:
 
   statsd:
     endpoint: 0.0.0.0:8125
+    aggregation_interval: 10s
+    timer_histogram_mapping:
+      - statsd_type: timing
+        observer_type: summary
+        summary:
+         percentiles: [0, 10, 50, 90, 95, 99, 100]
+      - statsd_type: distribution
+        observer_type: summary
+        summary:
+         percentiles: [0, 10, 50, 90, 95, 99, 100]
+
     
 processors:
   batch:
