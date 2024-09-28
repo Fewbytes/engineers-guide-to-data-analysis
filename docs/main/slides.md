@@ -131,6 +131,15 @@ backgroundSize: contain
 - Consistent sampling
 
 ---
+
+# Comparison
+|   |Size|Usage|
+|---|---|---|
+|logs|Large|Individual requests, ad-hoc aggregations|
+|traces|Large/Medium|Individual requests, ad-hoc aggregations|
+|metrics|Small|Overall system status|
+
+---
 layout: section
 ---
 
@@ -382,6 +391,7 @@ login.latency.ok:203.1|ms|@0.1
 
 - Fault isolation from primary system
 - (Over)load management: Loss vs Latency
+- Single writer principle
 - Aggregation partitioning: e.g. percentiles
 - Retention, availability
 - Emergency access
@@ -452,12 +462,41 @@ layout: section
 
 # Context matters
 - Some metrics are related, need to be shown together
+  - Refer to models (USE, RED, queueing, etc)
 - Reference values: normal/abnormal
   - What is "big"? Is 102 a lot?
+  - Upper/lower margins
+
+Visually encode context!
 
 ---
 
-# Encoding context in visualization
+# Axes
+- Avoid multiple Y axes
+- Units
+- Bounds: ideally encoding known metric range
+- X axis range should reference contextual time window
+  - How long until issues are seen?
+  - Use time shift to compare with past
+
+---
+
+# Working with metric clusters
+
+No more than 4-5 lines per plot. Instead:
+- Use ad-hoc aggergations
+  - Top/bottom K
+  - Most deviant ($TopK(metric - avg(metrics))$)
+- Create alternative aggregate metrics
+  - Sum, percentiles, histograms
+- Consider using high cardinality engine
+
+
+---
+
+# Exercise
+
+Create a service monitoring dashboard
 
 ---
 layout: statement

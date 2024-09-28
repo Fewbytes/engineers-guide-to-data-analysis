@@ -30,3 +30,7 @@ blockquote cite::before {
     position: absolute;
     bottom: 30px;
 }
+
+.slidev-layout table th {
+    font-weight: bold;
+}
