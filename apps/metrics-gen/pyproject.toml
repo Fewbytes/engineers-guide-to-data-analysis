@@ -1,0 +1,17 @@
+[project]
+name = "metrics-gen"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "httpx>=0.27.2",
+    "opentelemetry-exporter-otlp>=1.27.0",
+    "opentelemetry-sdk>=1.27.0",
+    "orjson>=3.10.7",
+    "psutil>=6.0.0",
+    "scipy>=1.14.1",
+    "statsd>=4.0.1",
+    "uvicorn>=0.30.6",
+]
