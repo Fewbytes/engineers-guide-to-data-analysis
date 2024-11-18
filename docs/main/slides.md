@@ -390,7 +390,7 @@ login.latency.ok:203.1|ms|@0.1
 # Pipeline design
 
 - Fault isolation from primary system
-- (Over)load management: Loss vs Latency
+- (Over)load management: Loss vs Latency, push vs pull
 - Single writer principle
 - Aggregation partitioning: e.g. percentiles
 - Retention, availability
