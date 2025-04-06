@@ -333,7 +333,7 @@ layout: section
 
 ---
 
-![](./images/telemetry-pipeline.svg)
+![](/images/telemetry-pipeline.svg)
 
 
 ---
