@@ -26,7 +26,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       - name: Build presentation
-        run: npm run build
+        run: npm i && npm run build
         working-directory: ./docs/main
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
